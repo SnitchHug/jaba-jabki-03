@@ -137,11 +137,11 @@ public class Main {
         }
         System.out.println(numberMax);
 
-        // 4.3
+        // 4.3 добавил произведение в вывод
         int numberMultiSeven = 7;
 
         for (int i = 1; i < 11; i++) {
-            System.out.printf("%s * %s\n", numberMultiSeven, i);
+            System.out.printf("%s * %s = %s\n", numberMultiSeven, i, numberMultiSeven * i);
         }
 
         // 4.4
@@ -159,15 +159,15 @@ public class Main {
         }
         System.out.println(numberCount);
 
-        // 5.1
-        int y = 100;
+        // 5.1 поменял условие while и if, и значение переменной
+        int y = 7;
 
-        while (y > 99) {
-            if (y % 7 == 0) {
+        while (y % 7 == 0) {
+            if (y > 99) {
                 System.out.println(y);
                 break;
             }
-            y++;
+            y += 7;
         }
 
         // 5.2
@@ -181,23 +181,23 @@ public class Main {
         }
         System.out.println(factorial);
 
-        // 5.3
+        // 5.3 добавил пробел после if
         int numberSimple = -4;
         int m = 2;
+        String result = "Число простое";
 
-        if(numberSimple > 1) {
-            while (m <= numberSimple){
-                if (m == numberSimple) {
-                    System.out.println("Число простое");
-                } else if (numberSimple % m == 0) {
-                    System.out.println("Число не простое");
+        if (numberSimple > 1) {
+            while (m < numberSimple){
+                if (numberSimple % m == 0) {
+                    result = "Число не простое";
                     break;
                 }
                 m++;
             }
         } else {
-            System.out.println("Число не простое");
+            result = "Число не простое";
         }
+        System.out.println(result);
 
         // 5.4
         int numberSkittles = 1;
@@ -211,29 +211,31 @@ public class Main {
             numberSkittles++;
         }
 
-        // 6.1
+        // 6.1 убрал else из конструкции if
         for (int i = 1; i <= 20 ; i++) {
             if (i % 3 == 0) {
                 continue;
-            } else {
-                System.out.println(i);
             }
+            System.out.println(i);
         }
 
-        // 6.2
+        // 6.2 увеличен диапазон, добавленая конструкция if
         int v = 0;
 
-        for (int i = 20; i > 0; i--) {
+        for (int i = 20; i > -5; i--) {
+            if (i < 0) {
+                break;
+            }
             v += i;
         }
         System.out.println(v);
 
-        // 6.3
+        // 6.3 упростил условие в if
         int g = 0;
 
         for (int i = 1; i > 0; i++) {
             g += i;
-            if (g / 100 >= 1) {
+            if (g > 99) {
                 System.out.println(g);
                 break;
             }
