@@ -1,93 +1,241 @@
 public class Main {
     public static void main(String[] args) {
 
-        /**
-         * Условный оператор if-else
-         */
-        boolean isRain = true;
+        // 1.1
+        int numberEven = 10;
 
-        System.out.println("Надеть куртку");
-        System.out.println("Надеть обувь");
-        System.out.println("Взять сумку");
-
-        if (isRain) {
-            System.out.println("Взять зонт");
-        }
-
-        Long a = 1000L;
-        Long b = 1000L;
-
-        System.out.println(a.equals(b));
-
-        String animal = "dog1";
-        if (animal.equals("cat")) {
-            System.out.println("Мяу");
-        } else if (animal.equals("dog")) {
-            System.out.println("Гав");
+        if (numberEven % 2 == 0) {
+            System.out.println("Число четное");
         } else {
-            System.out.println("Хрю");
-        }
-        int floor = 1;
-        double price = 3000;
-
-        if (floor == 1 && price < 3000) {
-            System.out.println("Подходит для аренды!");
+            System.out.println("Число нечетное");
         }
 
-        // Тенарный оператор
-        System.out.println(a > 0 ? "a положительное число" : "а неполжительное число");
+        // 1.2
+        int numberGreater = 20;
+        int numberLess = 10;
 
-        /**
-         * Условный оператор switch
-         */
+        if (numberGreater > numberLess) {
+            System.out.println("Первое больше");
+        } else if (numberGreater < numberLess) {
+            System.out.println("Второе больше");
+        } else {
+            System.out.println("Равны");
+        }
 
-        switch (animal) {
-            case "cat":
-                System.out.println("Мяу");
+        // 1.3
+        int numberPositive = 10;
+
+        if (numberPositive > 0) {
+            System.out.println("Положительное");
+        } else if (numberPositive < 0) {
+            System.out.println("Отрицательное");
+        } else {
+            System.out.println("Равно нулю");
+        }
+
+        // 1.4
+        int numberAge = 18;
+
+        if (numberAge >= 18) {
+            System.out.println("Доступ разрешен");
+        } else {
+            System.out.println("Доступ запрещен");
+        }
+
+        // 1.5
+        String colour = "Green";
+
+        if (colour.equals("Green")) {
+            System.out.println("Иди");
+        } else if (colour.equals("Yellow")) {
+            System.out.println("Внимание");
+        } else {
+            System.out.println("Стой");
+        }
+
+        // 2.1
+        int numberNegative = -4;
+        System.out.println(numberNegative > 0 ? "положительное" : (numberNegative == 0 ? "нулевое" : "отрицательное"));
+
+        // 2.2
+        int numberToDivide = 509;
+        System.out.println(numberToDivide % 3 == 0 && numberToDivide % 5 == 0 ? "Кратно" : "Не кратно");
+
+        // 2.3
+        int numberOdd = 33;
+        System.out.println(numberOdd % 2 == 0 ? "Четное" : "Нечетное");
+
+        // 3.1
+        int numberFriday = 5;
+
+        switch (numberFriday) {
+            case 1:
+                System.out.println("Понедельник");
                 break;
-            case "dog":
-                System.out.println("Гав");
+            case 2:
+                System.out.println("Вторник");
                 break;
-            case "fish":
-                System.out.println("Буль");
+            case 3:
+                System.out.println("Среда");
                 break;
-            case "bear":
-                System.out.println("rrrr");
+            case 4:
+                System.out.println("Четверг");
+                break;
+            case 5:
+                System.out.println("Пятница");
+                break;
+            case 6:
+                System.out.println("Суббота");
+                break;
+            case 7:
+                System.out.println("Воскресенье");
                 break;
             default:
-                System.out.println("Привет!");
+                System.out.println("Ошибка");
         }
 
-        /**
-         * Циклы
-         */
+        // 3.2
+        int numberGood = 4;
 
-        for (int i = 0; i < 10; i++) {
-            System.out.println(i);
-        }
-
-        int x = 0;
-        while (x < 10) {
-            System.out.println(x);
-            //x++;
-        }
-
-        for (int i = 0; i < 10; i++) {
-            if (i == 5) {
-                // Выход из цикла
+        switch (numberGood) {
+            case 1:
+                System.out.println("Нельзя отправлять");
                 break;
+            case 2:
+                System.out.println("Ужасно");
+                break;
+            case 3:
+                System.out.println("Приемлемо");
+                break;
+            case 4:
+                System.out.println("Хорошо");
+                break;
+            case 5:
+                System.out.println("Отлично");
+                break;
+            default:
+                System.out.println("Неоценимо");
+        }
+
+        // 4.1
+        int numberSum = 0;
+
+        for (int i = 0; i < 20; i++) {
+            if (i % 2 == 0) {
+                numberSum += i;
             }
+        }
+        System.out.println(numberSum);
+
+        // 4.2
+        int numberMax = 0;
+
+        for (int i = 0; i < 20; i++) {
+            if (i > numberMax) {
+                numberMax = i;
+            }
+        }
+        System.out.println(numberMax);
+
+        // 4.3
+        int numberMultiSeven = 7;
+
+        for (int i = 1; i < 11; i++) {
+            System.out.printf("%s * %s = %s\n", numberMultiSeven, i, numberMultiSeven * i);
+        }
+
+        // 4.4
+        for (int i = 10; i > 0; i--) {
             System.out.println(i);
         }
 
-        for (int i = 1; i < 10; i++) {
+        // 4.5
+        int numberCount = 0;
 
-            // проверка на четность
-            if (i % 2 != 0) {
-                // пропуск итерации
+        for (int i = 1; i < 51; i++) {
+            if (i % 2 == 0) {
+                numberCount++;
+            }
+        }
+        System.out.println(numberCount);
+
+        // 5.1
+        int y = 101;
+
+        while (y % 7 != 0) {
+            y++;
+        }
+        System.out.println(y);
+
+        // 5.2
+        int b = 10;
+        int factorial = 1;
+        int x = 1;
+
+        while (x <= b) {
+            factorial = factorial * x;
+            x++;
+        }
+        System.out.println(factorial);
+
+        // 5.3
+        int numberSimple = 14;
+        int m = 2;
+        String result = "Число простое";
+
+        if (numberSimple > 1) {
+            while (m * m <= numberSimple){
+                if (numberSimple % m == 0) {
+                    result = "Число не простое";
+                    break;
+                }
+                m++;
+            }
+        } else {
+            result = "Число не простое";
+        }
+        System.out.println(result);
+
+        // 5.4
+        int numberSkittles = 1;
+
+        while (numberSkittles <= 10) {
+            if (numberSkittles < 10) {
+                System.out.printf("Осталось %s\n", numberSkittles);
+            } else {
+                System.out.println("Страйк!");
+            }
+            numberSkittles++;
+        }
+
+        // 6.1
+        for (int i = 1; i <= 20 ; i++) {
+            if (i % 3 == 0) {
                 continue;
             }
             System.out.println(i);
+        }
+
+        // 6.2
+        int v = 0;
+
+        for (int i = 20; i > -5; i--) {
+            if (i < 0) {
+                break;
+            }
+            v += i;
+        }
+        System.out.println(v);
+
+        // 6.3
+        int g = 0;
+
+        for (int i = 1; i > 0; i++) {
+            g += i;
+            if (g > 100) {
+                System.out.println(g);
+                break;
+            }
         }
     }
 }
