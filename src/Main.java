@@ -137,7 +137,7 @@ public class Main {
         }
         System.out.println(numberMax);
 
-        // 4.3 добавил произведение в вывод
+        // 4.3
         int numberMultiSeven = 7;
 
         for (int i = 1; i < 11; i++) {
@@ -159,16 +159,13 @@ public class Main {
         }
         System.out.println(numberCount);
 
-        // 5.1 поменял условие while и if, и значение переменной
-        int y = 7;
+        // 5.1
+        int y = 101;
 
-        while (y % 7 == 0) {
-            if (y > 99) {
-                System.out.println(y);
-                break;
-            }
-            y += 7;
+        while (y % 7 != 0) {
+            y++;
         }
+        System.out.println(y);
 
         // 5.2
         int b = 10;
@@ -181,13 +178,13 @@ public class Main {
         }
         System.out.println(factorial);
 
-        // 5.3 добавил пробел после if
-        int numberSimple = -4;
+        // 5.3
+        int numberSimple = 14;
         int m = 2;
         String result = "Число простое";
 
         if (numberSimple > 1) {
-            while (m < numberSimple){
+            while (m * m <= numberSimple){
                 if (numberSimple % m == 0) {
                     result = "Число не простое";
                     break;
@@ -211,7 +208,7 @@ public class Main {
             numberSkittles++;
         }
 
-        // 6.1 убрал else из конструкции if
+        // 6.1
         for (int i = 1; i <= 20 ; i++) {
             if (i % 3 == 0) {
                 continue;
@@ -219,7 +216,7 @@ public class Main {
             System.out.println(i);
         }
 
-        // 6.2 увеличен диапазон, добавленая конструкция if
+        // 6.2
         int v = 0;
 
         for (int i = 20; i > -5; i--) {
@@ -230,12 +227,12 @@ public class Main {
         }
         System.out.println(v);
 
-        // 6.3 упростил условие в if
+        // 6.3
         int g = 0;
 
         for (int i = 1; i > 0; i++) {
             g += i;
-            if (g > 99) {
+            if (g > 100) {
                 System.out.println(g);
                 break;
             }
